@@ -104,5 +104,9 @@ viewBody order body =
 main : Html msg
 main =
     Svg.svg
-        [ width "1200", height "1200", viewBox "0 0 1200 1200" ]
+        [ width "1200"
+        , height "1200"
+        , viewBox "0 0 1200 1200"
+        , transform "rotate(-10 50 100) translate(-36 45.5) skewX(40) scale(1 0.5)"
+        ]
         (List.indexedMap (\index body -> viewBody index body) bodies)
